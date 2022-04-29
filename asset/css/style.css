@@ -1,0 +1,325 @@
+/*Reset CSS*/
+*{
+    box-sizing: inherit;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    box-sizing: border-box;
+    position: relative;
+}
+header,nav,footer,main{
+    display: block;
+}
+ul,p{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+/*Common*/
+.container{
+    max-width: 1200px;
+    padding-left: 15px ;
+    padding-right: 15px;
+    margin: auto;
+}
+h2,h3,h4{
+    font-family: 'Encode Sans Expanded', sans-serif;
+
+}
+/*Landing-page*/
+body{
+    max-width: 1600px;
+    margin: auto;
+}
+
+.header_main{
+    padding: 20px 0 10px 0;
+}
+
+.search-warpper{
+    margin-top: 5px;
+    position: relative;
+}
+.header_search-bar{
+    border: solid 1px #ccc;
+    padding: 0 15px;
+    line-height: 40px;
+    height: 50px;
+    width: 100%;
+}
+.btn_search{
+    position: absolute;
+    right: 0;
+    height: 50px;
+    min-width: 100px;
+    line-height: 40px;
+    background-color: #c83548;
+    border: none;
+    color: #fff;
+}
+
+.userlogin{
+    margin: 10px 20px 0 0px;
+    position: relative;
+}
+.userlogin, .cart{
+    float: left;
+}
+.icon_user, .icon_cart{
+    width: 40px;
+    vertical-align: top;
+    min-height: 40px;
+    display: inline-block;
+}
+.icon_user{
+    background: url("../image/icon/user-icon.webp") no-repeat 0 50%;
+}
+.userlogin .box-text{
+    margin-top: 10px;
+}
+.box-text{
+    font-weight: 700;
+    display: inline-block;
+    font-size: 12px;
+}
+/*Begin: open subnav*/
+.userlogin:hover .userlogin_box, #mb_main>ul>li:hover .mb_sub{
+    display: initial;
+}
+.userlogin_box, .mb_sub{
+    display: none;
+}
+/*End: open subnav*/
+.userlogin_box::before {
+    content: '';
+    position: absolute;
+    top: 43px;
+    right: 70px;
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+    z-index: 1001;
+}
+.userlogin_box ul{
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 7px 15px;
+    transition: opacity .5s transform .5s;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 10px 0px;
+}
+.userlogin_box li{
+    background-color: #c83548;
+    border-radius: 4px;
+    min-width: 200px;
+    line-height: 40px;
+    text-align: center;
+    margin: 7px 0;
+}
+.userlogin li:hover{
+    background-color: #e84b65;
+}
+.userlogin_box a{
+    color: #fff;
+    font-weight: 500;
+    min-width: 200px;
+    display: block;
+}
+.userlogin:hover .userlogin_box{
+    transform: translate(0,0);
+    opacity: 1;
+    visibility: visible;
+}
+.cart{
+    margin-top: 10px ;
+}
+.icon_cart{
+    background: url("../image/icon/cart-icon.webp") no-repeat 0 50%;
+}
+.cart a{
+    display: block;
+}
+.cart_header_count{
+    display: inline;
+}
+.cart_price-total{
+    color: #ccc;
+    font-weight: 400;
+    display: block;
+}
+
+/*Nav bar*/
+.nav{
+    margin-top: 15px;
+    background-color: #c83548;
+}
+#mb_main ul, .mb_sub ul{
+    margin: 0;
+    padding: 0;
+}
+#mb_main>ul>li{
+    display: inline-block;
+}
+#mb_main>ul>li>a{
+    position: relative;
+    display: block;
+    padding: 10px 30px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.42857143;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all ease .3s;
+}
+#mb_main>ul>li>a:hover{
+    color: #fddb40;
+}
+.mb_sub{
+    position: absolute;
+    z-index: 999;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px 1px #ccc;
+}
+.mb_sub li{
+    display: block;
+    padding: 10px 0;
+    padding-left: 15px;
+    min-width: 200px;
+    line-height: 1.42857143;
+}
+.mb_sub a {
+    font-size: 16px;
+    display: inline-block;
+    color: #000;
+}
+.mb_sub a:hover{
+    color: #faaf40;
+}
+
+/*Footer*/
+.footer_container{
+    background:linear-gradient( rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65) ),url('../image/background/backgrounf_footer.webp') no-repeat;
+    background-size: cover;
+    padding: 30px 0 25px;
+    color: #fff;
+}
+.box-footer_title{
+    margin: 10px 0;
+    padding: 0 0 15px;
+    border-bottom: 1px #fff dotted;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+}
+.box-footer_list li{
+    font-size: 15px;
+    padding: 5px;
+}
+.support-information a{
+    color: #f3f4f8;
+}
+.form-footer{
+    position: relative;
+}
+.form-footer input[type="email"]{
+    width: 100%;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+
+}
+.form-footer button[type="submit"]{
+    position: absolute;
+    right: 0px;
+    padding: 6px 12px;
+    vertical-align: center;
+    background-color: #006838;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+
+}
+.footer_social li{
+    display: inline-block;
+    margin-top: 5px;
+    padding: 0;
+    
+}
+.footer_social a{
+    display: block;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 300ms;
+}
+.footer_social a:hover{
+    color: #616161;
+    transform: translatey(-5px);
+}
+
+#copyright{
+    padding: 7px 15px;
+    text-align: center;
+    font-size: 14px;
+}
+#copyright a:hover{
+    color: #f3652a;
+}
+
+/*Facebook-inbox*/
+.facebook-inbox-tab{
+    position: fixed;
+    right: 40px;
+    bottom: 0;
+    min-width: 250px;
+    padding: 6px;
+    background-color: rgb(51, 102, 204);
+    border: 1px solid rgb(121, 121, 121);
+    transition: all 0.3s ease-in-out 0s;
+    display: none;
+
+}
+.facebook-inbox-tab:hover{
+    bottom: 5px;
+}
+.inbox-tab_title{
+    position: relative;
+    color: #f3f4f8;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: justify;
+    padding: 0 20px 0 10px;
+}
+.inbox-tab_title span{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+}
+.inbox-tab_title i{
+    font-size: 24px;
+    margin-right: 5px;
+}
+/*Relative*/
+
