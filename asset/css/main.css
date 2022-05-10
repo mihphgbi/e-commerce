@@ -1,6 +1,13 @@
 /*Slider*/
-.sliders{
+
+.sliderComponent{
     position: relative;
+}
+.sliderComponent-list{
+    display: flex;
+    justify-content: space-around;
+    overflow:hidden;
+    transition: transform 0.3s linear;
 }
 .slider-img{
     position: relative;
